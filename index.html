@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Riddhuu ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles"></div>
+    <div id="balloons"></div>
+    <div id="petals"></div>
+
+    <!-- PAGE 1 : Welcome -->
+    <section id="page1" class="page active">
+        <div class="card welcome-card">
+            <h1 class="title">Happy Birthday</h1>
+            <h2 class="name">Riddhuu</h2>
+            <p class="date">14 September ❤️</p>
+
+            <div class="main-photo">
+                <img src="photo1.jpg" alt="Riddhuu" class="profile-img">
+            </div>
+
+            <p class="welcome-text">A special surprise for you...</p>
+
+            <button class="btn" onclick="goToPage(2)">Open Gift 🎁</button>
+        </div>
+    </section>
+
+    <!-- PAGE 2 : Cake -->
+    <section id="page2" class="page">
+        <div class="card">
+            <h2 class="section-title">Make a Wish ✨</h2>
+
+            <div class="photo-gallery">
+                <img src="photo1.jpg" alt="Riddhuu" class="gallery-img">
+                <img src="photo2.jpg" alt="Riddhuu" class="gallery-img">
+                <img src="photo3.jpg" alt="Riddhuu" class="gallery-img">
+            </div>
+
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="icing"></div>
+                    <div class="layer layer1"></div>
+                    <div class="layer layer2"></div>
+                    <div class="layer layer3"></div>
+                </div>
+            </div>
+
+            <p class="cake-text" id="cakeText">Blow the candles and make a wish!</p>
+
+            <div class="buttons">
+                <button id="blowCandles" class="btn secondary">💨 Blow Candles</button>
+                <button class="btn" onclick="goToPage(3)" id="nextBtn" style="display:none;">Next ❤️</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3 : Message + Song -->
+    <section id="page3" class="page">
+        <div class="card final-card">
+            <h2 class="section-title">For You ❤️</h2>
+
+            <div class="message-box">
+                <p id="wishMessage"></p>
+            </div>
+
+            <div class="lyrics-box">
+                <h3 class="lyrics-title">🎵 Special Song</h3>
+                <div class="lyrics">
+                    तोहसे मोरा नहीं मोहरा मनवा (आ आ)<br>
+                    होगी रे साथ मोहरा शगुनवा (आ आ)<br>
+                    सौंधा सौंधा सा ये साथ तोहरा (आ आ)<br>
+                    चुपके चुपके से महका दिया (आ आ)<br><br>
+                    तोहरे आगे मैं सर को झुका दू<br>
+                    तोहरे सपने फलक पे बिठा दू<br>
+                    काला टिका मैं तोहे लगा दू<br>
+                    रखियो मुझपे भरोसा ज़रा आ आ
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="playMusic" class="btn">🎵 Play Song</button>
+                <button class="btn secondary" onclick="goToPage(1)">🔄 Restart</button>
+            </div>
+        </div>
+    </section>
+
+    <audio id="bgMusic" loop>
+        <source src="birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
